@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cluedo HP</title>
+    <style>
+        body {
+            background-image: url("img/parchemin.jpg");
+        }
+        
+        h1 {
+            text-align: center;
+            color: #000000;
+            font-family: "Constantia", Times, serif;
+            font-size: 50px;
+        }
+        
+        img {
+            margin: 50px 100px 50px 100px;
+            background-color: white;
+            width: 350px;
+        }
+
+        button{
+            background-color: black;
+            color: white;
+            font: bold 20px "Constantia", Times, serif;
+            width: 10em;
+            height: 3em;
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Cluedo Harry Potter</h1>
+    <p id="normalDice"></p>
+    <img id="firstDice" src="" width="30%" height="auto" style="float: left">
+
+    <p id="normalDice2"></p>
+    <img id="secondDice" src="" width="30%" height="auto" style="float: left">
+    
+    <p id="hpDice"></p>
+    <img id="thirdDice" src="" width="30%" height="auto">
+
+    <button onclick="rollDice()">Lancer les dès</button>
+    
+    <script>
+        let getNormalDice, getNormalDice2, getHpDice;
+        let nbFirstDice, nbSecondDice;
+        function rollDice(){
+            nbFirstDice = Math.floor(Math.random() * 6) + 1;
+            nbSecondDice = Math.floor(Math.random() * 6) + 1;
+            getNormalDice = document.getElementById("normalDice");
+            getHpDice = document.getElementById("hpDice");
+            
+            
+            if(nbFirstDice == 1){
+                document.getElementById("firstDice").src = "img/d-1.png";
+            }
+            if(nbFirstDice == 2){
+                document.getElementById("firstDice").src = "img/d-2.png";
+            }
+            if(nbFirstDice == 3){
+                document.getElementById("firstDice").src = "img/d-3.png";
+            }
+            if(nbFirstDice == 4){
+                document.getElementById("firstDice").src = "img/d-4.png";
+            }
+            if(nbFirstDice == 5){
+                document.getElementById("firstDice").src = "img/d-5.png";
+            }
+            if(nbFirstDice == 6){
+                document.getElementById("firstDice").src = "img/d-6.png";
+            }
+    
+            nbFirstDice = Math.floor(Math.random() * 6) + 1;
+            
+            if(nbFirstDice == 1){
+                document.getElementById("secondDice").src = "img/d-1.png";
+            }
+            if(nbFirstDice == 2){
+                document.getElementById("secondDice").src = "img/d-2.png";
+            }
+            if(nbFirstDice == 3){
+                document.getElementById("secondDice").src = "img/d-3.png";
+            }
+            if(nbFirstDice == 4){
+                document.getElementById("secondDice").src = "img/d-4.png";
+            }
+            if(nbFirstDice == 5){
+                document.getElementById("secondDice").src = "img/d-5.png";
+            }
+            if(nbFirstDice == 6){
+                document.getElementById("secondDice").src = "img/d-6.png";
+            }
+            
+            if(nbSecondDice == 1){
+                document.getElementById("thirdDice").src = "img/hp-1.jpg";
+            }
+            if(nbSecondDice == 2){
+                document.getElementById("thirdDice").src = "img/hp-2.jpg";
+            }
+            if(nbSecondDice == 3){
+                document.getElementById("thirdDice").src = "img/hp-3.jpg";
+            }
+            if(nbSecondDice == 4){
+                document.getElementById("thirdDice").src = "img/hp-4.jpg";
+            }
+            if(nbSecondDice == 5){
+                document.getElementById("thirdDice").src = "img/hp-5.jpg";
+            }
+            if(nbSecondDice == 6){
+                document.getElementById("thirdDice").src = "img/hp-6.jpg";
+            }
+        }
+    </script>
+</body>
+
+</html>
